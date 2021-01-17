@@ -1,5 +1,6 @@
 # JS/TS Boilerplate for HackerRank (or similar coding tests)
 
+[![Build Status](https://img.shields.io/github/workflow/status/deskoh/hackerrankjs_boilerplate/Node%20CI)](https://github.com/deskoh/hackerrankjs_boilerplate/actions?query=workflow%3ANode+CI)
 [![dependencies Status](https://img.shields.io/david/deskoh/hackerrankjs_boilerplate.svg?style=flat)](https://david-dm.org/deskoh/hackerrankjs_boilerplate)
 [![devDependencies Status](https://img.shields.io/david/dev/deskoh/hackerrankjs_boilerplate.svg?style=flat)](https://david-dm.org/deskoh/hackerrankjs_boilerplate?type=dev)
 
@@ -46,6 +47,16 @@ node _template_ts < _template_ts\in.txt > out.txt
 ## Debugging
 
 The profiles `Debug TS` and `Debug JS` are defined in `.vscode/launch.json` for debugging TypeScript and JavaScript source respectively. Open the source file before starting the debug session. The content of `in.txt` will be piped in as `stdin`.
+
+## Unit Tests
+
+The project is setup with [Mocha](https://mochajs.org/) test framework for unit testing. Tests should be suffix with `.test.js` or `.test.ts`, See `.mocharc.json`.
+
+```sh
+# Run all tests
+npm test
+```
+
 
 ## ESLint
 

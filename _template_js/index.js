@@ -1,6 +1,8 @@
 'use strict';
 const readline = require('readline');
 
+const echo = (data) => data;
+
 const rl = readline.createInterface({
   input: process.stdin,
 });
@@ -12,3 +14,5 @@ rl.on('line', (line) => {
 rl.on('close', () => {
   process.stdout.end();
 });
+
+module.exports = { echo }
