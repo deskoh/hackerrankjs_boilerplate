@@ -1,6 +1,7 @@
 # JS/TS Boilerplate for HackerRank (or similar coding tests)
 
 [![Build Status](https://img.shields.io/github/workflow/status/deskoh/hackerrankjs_boilerplate/Node%20CI)](https://github.com/deskoh/hackerrankjs_boilerplate/actions?query=workflow%3ANode+CI)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/deskoh/hackerrankjs_boilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/deskoh/hackerrankjs_boilerplate/context:javascript)
 [![dependencies Status](https://img.shields.io/david/deskoh/hackerrankjs_boilerplate.svg?style=flat)](https://david-dm.org/deskoh/hackerrankjs_boilerplate)
 [![devDependencies Status](https://img.shields.io/david/dev/deskoh/hackerrankjs_boilerplate.svg?style=flat)](https://david-dm.org/deskoh/hackerrankjs_boilerplate?type=dev)
 
@@ -57,7 +58,10 @@ The project is setup with [Mocha](https://mochajs.org/) test framework for unit 
 npm test
 ```
 
-
 ## ESLint
 
-ESLint is configured. See `.eslintrc.js` for details.
+```sh
+npm run lint
+```
+
+ESLint is configured with recommended ruleset. See `.eslintrc.js` for details.
