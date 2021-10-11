@@ -1,7 +1,9 @@
 
 {
-  "extension": ["ts", "js"],
-  "spec": "**/*.test.{ts,js}",
-  "require": "ts-node/register",
+  "spec": "**/*.test.{js,ts}",
+  "require": [
+    "fixtures.cjs",
+    "ts-node/register"
+  ],
   "exit": true
 }
