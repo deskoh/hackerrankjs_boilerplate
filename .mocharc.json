@@ -5,5 +5,10 @@
     "fixtures.cjs",
     "ts-node/register"
   ],
+  "watch-files": [
+    "*_js/*.js",
+    "*_ts/*.test.ts",
+    "*_ts/*.js"
+  ],
   "exit": true
 }

@@ -54,8 +54,11 @@ The profiles `Debug TS` and `Debug JS` are defined in `.vscode/launch.json` for 
 The project is setup with [Mocha](https://mochajs.org/) test framework for unit testing. Tests should be suffix with `.test.js` or `.test.ts`, See `.mocharc.json`.
 
 ```sh
-# Run all tests
+# Run all tests (TypeScript will be compiled first)
 npm test
+
+# Run all tests in watch mode
+npm run test:watch
 ```
 
 ## ESLint
