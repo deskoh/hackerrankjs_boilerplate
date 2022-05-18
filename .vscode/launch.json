@@ -12,10 +12,11 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "args": [
-        "<",
-        "${relativeFileDirname}/in.txt"
-      ],
+      // Somehow no longer works
+      // "args": [
+      //   "<",
+      //   "${relativeFileDirname}/in.txt"
+      // ],
       "console": "integratedTerminal"
     },
     {
@@ -24,17 +25,31 @@
       "program": "${file}",
       "request": "launch",
       "preLaunchTask": "tsc: build - tsconfig.json",
-      "args": [
-        "<",
-        "${relativeFileDirname}/in.txt"
-      ],
+      // Somehow no longer works
+      // "args": [
+      //   "<",
+      //   "${relativeFileDirname}/in.txt"
+      // ],
       "console": "integratedTerminal",
     },
     {
       "type": "node",
-      "name": "Debug Test",
-      "program": "${file}",
-      "request": "launch"
+      "name": "Debug Test (JS)",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "request": "launch",
+      "args": [
+        "${file}"
+      ]
     },
+    {
+      "type": "node",
+      "name": "Debug Test (TS)",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "request": "launch",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "args": [
+        "${file}"
+      ]
+    }
   ]
 }

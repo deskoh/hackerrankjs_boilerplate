@@ -47,7 +47,7 @@ node _template_ts < _template_ts\in.txt > out.txt
 
 ## Debugging
 
-The profiles `Debug TS` and `Debug JS` are defined in `.vscode/launch.json` for debugging TypeScript and JavaScript source respectively. Open the source file before starting the debug session. The content of `in.txt` will be piped in as `stdin`.
+The profiles `Debug TS` and `Debug JS` are defined in `.vscode/launch.json` for debugging TypeScript and JavaScript source respectively. Open the source file before starting the debug session. ~~The content of `in.txt` will be piped in as `stdin`.~~ Input needs to be piped to `stdin` in the debug session.
 
 ## Unit Tests
 
