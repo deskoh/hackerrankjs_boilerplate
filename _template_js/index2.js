@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const readline = require('readline');
+const readline = require("readline");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,10 +10,10 @@ const rl = readline.createInterface({
 // See https://nodejs.org/api/stream.html#stream_writable_cork
 process.stdout.cork();
 
-rl.on('line', (line) => {
+rl.on("line", (line) => {
   process.stdout.write(`${line}\n`);
 });
 
-rl.on('close', () => {
+rl.on("close", () => {
   process.stdout.end();
 });
