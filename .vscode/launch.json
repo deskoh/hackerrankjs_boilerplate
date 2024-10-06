@@ -9,47 +9,27 @@
       "name": "Debug JS",
       "program": "${file}",
       "request": "launch",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      // Somehow no longer works
-      // "args": [
-      //   "<",
-      //   "${relativeFileDirname}/in.txt"
-      // ],
+      "skipFiles": ["<node_internals>/**"],
+      "args": ["<", "${relativeFileDirname}/in.txt"],
       "console": "integratedTerminal"
     },
     {
       "type": "node",
       "name": "Debug TS",
-      "program": "${file}",
       "request": "launch",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      // Somehow no longer works
-      // "args": [
-      //   "<",
-      //   "${relativeFileDirname}/in.txt"
-      // ],
-      "console": "integratedTerminal",
+      "args": ["${relativeFile}", "<", "${relativeFileDirname}/in.txt"],
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal"
     },
     {
       "type": "node",
-      "name": "Debug Test (JS)",
-      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "name": "Debug Test",
       "request": "launch",
-      "args": [
-        "${file}"
-      ]
-    },
-    {
-      "type": "node",
-      "name": "Debug Test (TS)",
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-      "request": "launch",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "args": [
-        "${file}"
-      ]
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": ["--timeout", "60000", "${file}"],
+      "internalConsoleOptions": "openOnSessionStart"
     }
   ]
 }

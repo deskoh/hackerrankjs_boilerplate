@@ -1,4 +1,4 @@
-import readline = require("readline");
+import * as readline from "node:readline";
 
 export const echo = (data: string): string => data;
 

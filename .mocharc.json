@@ -1,14 +1,7 @@
-
 {
-  "spec": "**/*.test.{js,ts}",
-  "require": [
-    "fixtures.cjs",
-    "ts-node/register"
-  ],
-  "watch-files": [
-    "*_js/*.js",
-    "*_ts/*.test.ts",
-    "*_ts/*.js"
-  ],
+  "spec": "**/*.test.{cjs,ts}",
+  "require": ["fixtures.cjs"],
+  "loader": "ts-node/esm",
+  "watch-files": ["*_js/*.js", "*_ts/*.test.ts", "*_ts/*.js"],
   "exit": true
 }
