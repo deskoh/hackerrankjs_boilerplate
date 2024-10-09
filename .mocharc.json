@@ -1,7 +1,7 @@
 {
   "spec": "**/*.test.{cjs,ts}",
   "require": ["fixtures.cjs"],
-  "loader": "ts-node/esm",
+  "node-option": ["import=tsx"],
   "watch-files": ["*_js/*.js", "*_ts/*.test.ts", "*_ts/*.js"],
   "exit": true
 }

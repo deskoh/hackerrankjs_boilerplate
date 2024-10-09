@@ -17,8 +17,9 @@
       "type": "node",
       "name": "Debug TS",
       "request": "launch",
-      "args": ["${relativeFile}", "<", "${relativeFileDirname}/in.txt"],
-      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "runtimeExecutable": "tsx",
+      "program": "${relativeFile}",
+      "args": ["<", "${relativeFileDirname}/in.txt"],
       "cwd": "${workspaceRoot}",
       "console": "integratedTerminal"
     },
@@ -27,8 +28,8 @@
       "name": "Debug Test",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-      "runtimeArgs": ["--loader", "ts-node/esm"],
-      "args": ["--timeout", "60000", "${file}"],
+      "runtimeArgs": ["--import", "tsx"],
+      "args": ["--timeout", "60000", "${relativeFile}"],
       "internalConsoleOptions": "openOnSessionStart"
     }
   ]

@@ -26,14 +26,14 @@ npm run dev
 Inputs can be created as text files to be piped as `stdin`.
 
 ```sh
-# TypeScript (assuming source is compiled, see above)
-node --loader ts-node/esm _template_ts/index.ts < _template_ts\in.txt
+# TypeScript
+npx tsx _template_ts/index.ts < _template_ts\in.txt
 
 # JavaScript
 node  _template_js/index.cjs < _template_js\in.txt
 
 # To pipe output to a file (note that the out.txt will be created in current directory)
-node --loader ts-node/esm _template_ts/index.ts < _template_ts\in.txt
+npx tsx _template_ts/index.ts < _template_ts\in.txt > out.txt
 ```
 
 > To diff both files, use VS Code file compare feature by selecting both files and choose `Compare Selected` in the context menu.
