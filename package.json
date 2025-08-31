@@ -30,7 +30,7 @@
     "@types/eslint__js": "^9.14.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.17.2",
-    "concurrently": "^9.2.0",
+    "concurrently": "^9.2.1",
     "eslint": "^9.34.0",
     "mocha": "^11.7.1",
     "tsx": "^4.20.5",
